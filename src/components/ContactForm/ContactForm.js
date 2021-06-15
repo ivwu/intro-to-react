@@ -66,54 +66,54 @@ class ContactForm extends Component {
       return (
         <form className="Form-container" onSubmit={this.handleSubmit}>
           {" "}
-          <label htmlFor="firstName" className="Form-label">
-            First Name:{" "}
-            <input
-              id="firstName"
-              type="text"
-              name="firstName"
-              value={firstName}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label htmlFor="lastName">
-            Last Name:{" "}
-            <input
-              id="lastName"
-              type="text"
-              name="lastName"
-              value={lastName}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label htmlFor="email">
-            Email:{" "}
-            <input
-              id="email"
-              type="text"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <label htmlFor="message">
-            Message:{" "}
-            <input
-              id="message"
-              type="text"
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <br />
+          <p>
+            <label htmlFor="firstName" className="Form-label">
+              First Name:{" "}
+              <input
+                id="firstName"
+                type="text"
+                name="firstName"
+                value={firstName}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label htmlFor="lastName">
+              Last Name:{" "}
+              <input
+                id="lastName"
+                type="text"
+                name="lastName"
+                value={lastName}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label htmlFor="email">
+              Email:{" "}
+              <input
+                id="email"
+                type="text"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label htmlFor="message">
+              Message:{" "}
+              <input
+                id="message"
+                type="text"
+                name="message"
+                value={message}
+                onChange={this.handleChange}
+              />
+            </label>
+          </p>
           <input type="submit" value="Submit" />{" "}
         </form>
       );
