@@ -12,25 +12,33 @@ class ContactForm extends Component {
     };
   }
 
-  handleFirstNameChange = (event) => {
-    this.setState({ firstName: event.target.value }); //grab the value from the first name input field
-  };
+  // handleFirstNameChange = (event) => {
+  //   this.setState({ firstName: event.target.value }); //grab the value from the first name input field
+  // };
 
-  handleLastNameChange = (event) => {
-    this.setState({
-      lastName: event.target.value,
-    });
-  };
+  // handleLastNameChange = (event) => {
+  //   this.setState({
+  //     lastName: event.target.value,
+  //   });
+  // };
 
-  handleEmailChange = (event) => {
-    this.setState({
-      email: event.target.value,
-    });
-  };
+  // handleEmailChange = (event) => {
+  //   this.setState({
+  //     email: event.target.value,
+  //   });
+  // };
 
-  handleMessageChange = (event) => {
+  // handleMessageChange = (event) => {
+  //   this.setState({
+  //     message: event.target.value,
+  //   });
+  // };
+
+  // above methods refractored to one with event.target being able to dynamically grab which input it is referencing to
+
+  handleChange = (event) => {
     this.setState({
-      message: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -48,9 +56,9 @@ class ContactForm extends Component {
             <input
               id="firstName"
               type="text"
-              name="name"
+              name="firstName"
               value={firstName}
-              onChange={this.handleFirstNameChange}
+              onChange={this.handleChange}
             />
           </label>
           <br />
@@ -60,9 +68,9 @@ class ContactForm extends Component {
             <input
               id="lastName"
               type="text"
-              name="name"
+              name="lastName"
               value={lastName}
-              onChange={this.handleLastNameChange}
+              onChange={this.handleChange}
             />
           </label>
           <br />
@@ -72,9 +80,9 @@ class ContactForm extends Component {
             <input
               id="email"
               type="text"
-              name="name"
+              name="email"
               value={email}
-              onChange={this.handleEmailChange}
+              onChange={this.handleChange}
             />
           </label>
           <br />
@@ -84,9 +92,9 @@ class ContactForm extends Component {
             <input
               id="message"
               type="text"
-              name="name"
+              name="message"
               value={message}
-              onChange={this.handleMessageChange}
+              onChange={this.handleChange}
             />
           </label>
           <br />
