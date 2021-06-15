@@ -1,0 +1,19 @@
+.counter-container {
+  margin: 10%;
+  color: blue;
+}
+.Counter-active {
+  color: red;
+}
+
+.Counter-low {
+  color: green;
+}
+
+.button {
+  margin: 1%;
+}
+
+.no-reset {
+  display: none;
+}
